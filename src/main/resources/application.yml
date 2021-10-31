@@ -1,0 +1,12 @@
+server:
+  tomcat:
+    uri-encoding: UTF-8
+#自定义swagger2配置
+swagger2:
+  title: 电商应用开发平台
+  version: 6.1.0-SNAPSHOT1.0
+  description: 本文档描述了某某电商平台微服务接口定义
+  contact:
+    name: 浙江几时回电商贸易有限公司
+    url: https://somc.top
+    email: ide1024@163.com

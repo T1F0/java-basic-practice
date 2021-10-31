@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.supconit.study.generationAlgorithm.scheme.dao.SchemeMapper">   <!--namespace就是mapper文件的路径,文件名必须跟Dao类名字一致，因为是根据文件名做关联-->
+    <resultMap id="SchemeMap" type="com.supconit.study.generationAlgorithm.scheme.dao.Scheme"> <!--type就是实体类的路径-->
+        <id column="order_id"    property="orderId1" jdbcType="INTEGER"/>
+        <result column="provider_id1" property="providerId1" jdbcType="INTEGER"/>
+        <result column="provider_id2" property="providerId2" jdbcType="INTEGER"/>
+        <result column="provider_id3" property="providerId3" jdbcType="INTEGER"/>
+        <result column="provider_id4" property="providerId4" jdbcType="INTEGER"/>
+        <result column="provider_id5" property="providerId5" jdbcType="INTEGER"/>
+        <result column="provider_id6" property="providerId6" jdbcType="INTEGER"/>
+        <result column="provider_id7" property="providerId7" jdbcType="INTEGER"/>
+        <result column="provider_id8" property="providerId8" jdbcType="INTEGER"/>
+    </resultMap>
+    <!-- 表名 -->
+    <sql id="tableName" >
+        scheme
+    </sql>
+    <select id="selectAll" resultMap="SchemeMap">
+        select * from
+        <include refid="tableName" />
+    </select>
+    <select id="selectById" parameterType="Integer" resultMap="SchemeMap">
+        select * from
+        <include refid="tableName" />
+        where order_id = #{id}
+    </select>
+</mapper>

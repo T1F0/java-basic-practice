@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE configuration
+                PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+<!--    <context:property-placeholder location="xxx.properties" ignore-unresolvable="true" />-->
+<!--    <context:property-placeholder location="yyy.properties" ignore-unresolvable="true" />-->
+<!--    第一种方式-->
+<properties resource="application.properties"/>
+<!--    第二种方式-->
+<!--    第一种和第二种，结合起来就是，合并关系，并且，resource优先级大于property的-->
+<!--    <properties resource="db.properties">-->
+<!--        <property name="driver" value="com.mysql.jdbc.Driver"/>-->
+<!--        <property name="url" value="jdbc:mysql://120.25.227.234:3306/user?useSSL=true&amp;useUnicode=true&amp;characterEncoding=UTF-8"/>-->
+<!--    </properties>-->
+<settings>
+    <setting name="logImpl" value="STDOUT_LOGGING"/>
+</settings>
+
+<typeAliases>
+    <package name="pojo"/>
+</typeAliases>
+
+<!--    <typeAliases >-->
+<!--        <package name="pojo"/>-->
+<!--    </typeAliases>-->
+
+
+<environments default="mysql">
+    <environment id="mysql">
+        <transactionManager type="JDBC"/>
+        <dataSource type="POOLED">
+            <property name="driver" value="${driver}"/>
+            <property name="url" value="${url}"/>
+            <property name="username" value="${username}"/>
+            <property name="password" value="${password}"/>
+        </dataSource>
+    </environment>
+</environments>
+<mappers>
+    <mapper  resource="com/supconit/study/mybatis/xmltest/mapper/*.xml"/>
+    <!--        <package name="mapper"/>-->
+</mappers>
+
+
+</configuration>
