@@ -1,4 +1,10 @@
-package ssl.study.algorithmPractice;public class CodingTest {
+package ssl.study.algorithmPractice.stringArrayCompute;
+
+/**
+ * 古茗编程题：
+ * 输出“abcd”所有的排列方式
+ */
+public class StringOrder {
     public static void main(String[] args) {
         String[] array = {"a","b","c","d"};
         for (int i = 0; i < array.length; i++) {

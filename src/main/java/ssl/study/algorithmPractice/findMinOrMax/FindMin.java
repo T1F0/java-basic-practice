@@ -1,4 +1,4 @@
-package ssl.study.algorithmPractice;
+package ssl.study.algorithmPractice.findMinOrMax;
 
 /**
  * 找最小的数
