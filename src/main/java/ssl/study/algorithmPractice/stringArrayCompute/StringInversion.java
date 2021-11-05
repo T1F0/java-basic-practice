@@ -1,4 +1,4 @@
-package main.java.ssl.study.algorithmPractice;
+package ssl.study.algorithmPractice.stringArrayCompute;
 
 /**
  * 编码实现字符串倒置功能：
