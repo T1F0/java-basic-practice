@@ -2,7 +2,7 @@ package com.supconit.study.generationAlgorithm.scheme.controller;
 
 import com.supconit.study.generationAlgorithm.scheme.dao.Scheme;
 import com.supconit.study.generationAlgorithm.scheme.service.SchemeService;
-import com.supconit.study.generationAlgorithm.scheme.service.impl.SchemeServiceImpl;
+import ssl.study.generationAlgorithm.scheme.service.impl.SchemeServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
